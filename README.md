@@ -12,6 +12,8 @@ This README will be filled out more when the code is uploaded. Here are some bas
 ## Web interface ##
 THe current display, whichever it is, is available via HTTP on port 80 at the root URI. Clicking anywhere on the image advances through a series of displays.
 
+![Example base display](outside.png)
+
 ## Execution ##
 - The ```wbird.sh``` script is started by the GUI after the user is automatically logged in after boot. That script runs ```wbird.py``` in a loop, ensuring that it automatically restarts if it crashes. There is a minimum time between restarts to avoid thrasing the data sources if it crashes immediately.
 - The ```wbird.py``` process will stop and the ```wbird.sh``` script will pause if the file ```STOP``` exists in the working directory (```/home/pi/wbird```).
