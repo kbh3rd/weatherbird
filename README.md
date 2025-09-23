@@ -19,6 +19,8 @@ The current display, whichever it is, is available via HTTP on port 80 at the ro
 - The ```wbird.py``` process will stop and the ```wbird.sh``` script will pause if the file ```STOP``` exists in the working directory (```/home/pi/wbird```).
 
 ## Implementation ##
+All the code assumes a screen that is 800x480 pixels. Newer versions of the 7-inch Raspberry Pi touch screen have higher resolutions. A future enhancement, which honestly may never happen, would be to adjust to varying geometries, preferrably automatically.
+
 - **Configuration** is in ```wb_config.py```. This is a late addition to the code base, so it's not as well integrated into all the modules as it could/should be.
 - **Display sources** are listed in the ```altUrls``` list in ```wb_config.py``` . The first entry is blank as it is the default internally-generated display. The others are actually laid over the base display. Those that are less than 480 pixels tall let the wind/warnings and current conditions show through from the base display at the top and bottom.
 - **Location** is given as latitude and longitude in ```wb_config.py``` for warnings and watches, and with the ```myStationId``` setting which names the National Weather Service weather station for current conditions.
